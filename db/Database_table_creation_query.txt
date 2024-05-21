@@ -1,0 +1,21 @@
+CREATE DATABASE expensedb;
+
+CREATE TABLE USERS (
+  user_id SERIAL PRIMARY KEY,
+  NAME VARCHAR(50),
+  PASSWORD VARCHAR(100)
+);
+
+INSERT INTO USERS (NAME, PASSWORD) VALUES ('user1', 'pass1');
+INSERT INTO USERS (NAME, PASSWORD) VALUES ('user2', 'pass2');
+
+SELECT * FROM USERS;
+
+
+CREATE TABLE expense_details(
+  user_id integer NOT NULL,
+  expense_for varchar(200),
+  transaction_type varchar(20),
+	transaction_date DATE,
+	amount integer
+);
